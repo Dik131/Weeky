@@ -1,0 +1,43 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  background-color: inherit;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+input[type='text'] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: inherit;
+  color: inherit;
+}
+.addTaskButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.addTaskIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: var(--accent-color);
+  margin-left: 10px;
+}
+.addTaskIcon:hover {
+  fill: var(--accent-color-hover);
+}
