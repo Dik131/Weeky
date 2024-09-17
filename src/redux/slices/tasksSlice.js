@@ -131,6 +131,11 @@ const tasksSlice = createSlice({
     uncheckMonthTasks: (state) => {
       state.monthTasks.forEach((task) => (task.completed = false));
     },
+    uncheckDayTasks: (state) => {
+      Object.keys(state.byDay).forEach((day) => {
+        state.byDay[day].forEach((task) => (task.completed = false));
+      });
+    },
   },
 });
 

@@ -13,6 +13,7 @@ import {
   uncheckEverydayTasks,
   uncheckWeeklyTasksAndWeekAccordion,
   uncheckMonthTasks,
+  uncheckDayTasks,
 } from './redux/slices/tasksSlice';
 import './App.css';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
@@ -60,6 +61,7 @@ function App() {
       const now = new Date();
       if (now.getHours() === 0 && now.getMinutes() === 0) {
         dispatch(uncheckEverydayTasks());
+        dispatch(uncheckDayTasks()); // Add this line
         if (now.getDate() === 1) {
           // First day of the month
           dispatch(uncheckMonthTasks());
