@@ -61,13 +61,11 @@ function App() {
       const now = new Date();
       if (now.getHours() === 0 && now.getMinutes() === 0) {
         dispatch(uncheckEverydayTasks());
-        dispatch(uncheckDayTasks()); // Add this line
+        dispatch(uncheckDayTasks());
         if (now.getDate() === 1) {
-          // First day of the month
           dispatch(uncheckMonthTasks());
         }
         if (now.getDay() === 0) {
-          // Sunday
           dispatch(uncheckWeeklyTasksAndWeekAccordion());
         }
       }
